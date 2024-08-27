@@ -1,0 +1,16 @@
+import"./main-B3jpmAP_.js";import{c as p,w,u as f,s as v}from"./weather-CUOFRiZU.js";import{h as L}from"./todos-Bc_gTOjG.js";import{$ as u,S as M,M as b}from"./moviesElements-B1VtFaAc.js";const C=e=>{const n=document.querySelector(".now-location"),t=document.querySelector(".weather-num"),a=document.querySelector(".weather-des"),o=document.querySelector(".home-weather-top img"),i=document.querySelector(".current-weather-list");n&&t&&a&&i&&(n.innerHTML=`
+            <div>
+            <i class="fa-solid fa-location-dot"></i>
+            현재위치 ${e.city}
+            </div>`,t.innerHTML=`${Math.round(e.temperature-273.15)}&deg;`,a.textContent=e.weatherDescription,o&&(o.src=e.iconUrl,o.style.filter="invert(42%) sepia(100%) saturate(1000%) hue-rotate(180deg) brightness(100%) contrast(100%)"),i.innerHTML=`
+            <li>습도 ${e.humidity}&#37;</li>
+            <li>최고기온 ${Math.round(e.maxTemp-273.15)}&deg;</li>
+            <li>최저기온 ${Math.round(e.minTemp-273.15)}&deg;</li>
+        `)},I=(e,n)=>{const t=document.querySelector(".home-weather-bottom"),a=p[e];if(t){const o=document.createElement("li");o.innerHTML=`
+            ${a.nameKo}&nbsp;<b>${Math.round(n.temperature-273.15)}&deg;</b>
+        `,t.appendChild(o)}},S=async()=>{try{for(const n in p){const{lat:t,lon:a}=p[n],o=await w.getCurrentWeather({params:{lat:t,lon:a}});I(n,o)}try{await f()}catch{}const e=await w.getCurrentWeather({params:{lat:v.lat,lon:v.lon,lang:"kr"}});C(e)}catch{}};document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("home-weather"),n=document.getElementById("home-stock"),t=document.getElementById("home-movie");e.addEventListener("click",()=>{window.location.href="/pages/weather.html"}),n.addEventListener("click",()=>{window.location.href="/pages/stock.html"}),t.addEventListener("click",()=>{window.location.href="/pages/movies.html"})});const k=new b;async function x(){if(!u.movieContainer2)return;u.movieContainer2.innerHTML="",(await k.getNowPlayingMovies({params:{include_adult:!1,include_video:!1,language:"ko-KR",page:1}})).results.slice(0,5).forEach(t=>{var g;const a=document.createElement("li"),o=`${M}`+t.poster_path,i=document.createElement("div");i.style.backgroundImage=`url(${o})`,i.style.backgroundSize="cover",i.style.backgroundPosition="center",i.style.backgroundRepeat="no-repeat",i.classList.add("img-area");const c=document.createElement("ul");c.className="box";const s=document.createElement("li");s.className="title",s.textContent="🎬"+t.title;const h=document.createElement("li"),r=document.createElement("button");r.type="button";const E=t.vote_average.toFixed(1);r.textContent=`${"⭐"+E}`,r.style.cursor="pointer",h.append(r),c.append(s,h);const l=document.createElement("ul");l.className="overview";const d=document.createElement("li");d.className="view-title",d.textContent=`${t.title}`;const m=document.createElement("li");m.className="view-des",m.innerHTML=`
+            <p>
+              ${t.overview}  
+            </p>
+            <a class="movie-more">더 보기</a>
+          `,l.append(d,m),a.append(i,c,l),(g=u.movieContainer2)==null||g.appendChild(a)})}let y=3;L();var $;($=document.querySelector(".todo-more"))==null||$.addEventListener("click",()=>{y++,L(y)});x();document.addEventListener("DOMContentLoaded",S);

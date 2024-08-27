@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <title>할일</title>
+     <script type="module" crossorigin src="/assets/todo-DvT423y2.js"></script>
+     <link rel="modulepreload" crossorigin href="/assets/main-B3jpmAP_.js">
+     <link rel="modulepreload" crossorigin href="/assets/todos-Bc_gTOjG.js">
+     <link rel="stylesheet" crossorigin href="/assets/todo-CRve4dxY.css">
+   </head>
+
+   <body>
+      <div id="wrap">
+  <header>
+  <h1><a href="/"><img src="../../project_logo.png" alt="로고"/>멋쟁이들</a></h1>
+</header>
+
+  <div class="container">
+    <div id="cont_wrapper">
+   <div class="inner">
+      <h2>힙스터의 Todo List</h2>
+
+      <!-- top -->
+      <div class="top">
+         <form id="input-form">
+   
+            <!-- todo labels -->
+            <div class="todo_labels">
+               <ul class="todo_labels_list">
+                  <li>
+                     <input type="radio" name="todo_label" id="todo_import" data-state="import" value="중요한일" checked/>
+                     <label for="todo_import">중요한일</label>
+                  </li>
+                  <li>
+                     <input type="radio" name="todo_label" id="todo_study" data-state="study" value="공부"/>
+                     <label for="todo_study">공부</label>
+                  </li>
+                  <li>
+                     <input type="radio" name="todo_label" id="todo_reserve" data-state="promise" value="약속"/>
+                     <label for="todo_reserve">약속</label>
+                  </li>
+         
+               </ul>
+            </div>
+            
+            <!-- user_form -->
+            <div class="user_form">
+               <input type="text" class="text-input" name="todo" id="todo" placeholder="할일을 입력하세요."/>
+               <button id="add-btn">
+                  <span>추가</span>
+                  <i class="fa-solid fa-plus"></i>
+               </button>   
+            </div>
+            
+         </form>
+      </div>
+      <main id="main">
+         <div id="filter-group">
+            <button class="filter-button created all active" data-action="created">
+               모두 보기
+               <strong class="count">0</strong>
+            </button>
+            <button class="filter-button import" data-action="import">
+               중요한 일
+               <strong class="count">0 / 0</strong>
+            </button>
+            <button class="filter-button study" data-action="study">
+               공부
+               <strong class="count">0 / 0</strong>
+            </button>
+            <button class="filter-button promises" data-action="promis">
+               약속
+               <strong class="count">0 / 0</strong>
+            </button>
+            <button class="filter-button completed" data-action="completed">
+               완료된 할일
+               <strong class="count">0 / 0</strong>
+            </button>
+         </div>
+         <ul id="todos">
+         </ul>
+      </main>
+   </div>
+</div>
+
+  
+
+  </div>
+  <footer class="BottomTab" id="bottom-tab">
+  <a class="TabItem" href="/pages/weather.html">
+    <i class="fa-solid fa-cloud"></i>
+    <span class="TabItemLabel">Weather</span>
+  </a>
+
+  <a class="TabItem" href="/pages/stock.html">
+    <i class="fa-solid fa-arrow-trend-up"></i>
+    <span class="TabItemLabel">Stock</span>
+  </a>
+  
+  <a class="TabItem" href="/">
+    <i class="fas fa-home"></i>
+    <span class="TabItemLabel">Home</span>
+  </a>
+
+  <a class="TabItem" href="/pages/movies.html">
+    <i class="fa-solid fa-clapperboard"></i>
+    <span class="TabItemLabel">Movies</span>
+  </a>
+  
+  <a class="TabItem" href="/pages/todo.html">
+    <i class="fa-solid fa-list"></i>
+    <span class="TabItemLabel">Todo</span>
+  </a>
+</footer>
+
+</div>
+
+   </body>
+
+</html>

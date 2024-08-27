@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Movies</title>
+    <script type="module" crossorigin src="/assets/movies-Bf_-jTpe.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/main-B3jpmAP_.js">
+    <link rel="modulepreload" crossorigin href="/assets/moviesElements-B1VtFaAc.js">
+    <link rel="stylesheet" crossorigin href="/assets/movies-vk7pLdcK.css">
+  </head>
+  <body>
+    <div id="wrap">
+  <header>
+  <h1><a href="/"><img src="../../project_logo.png" alt="로고"/>멋쟁이들</a></h1>
+</header>
+
+  <div class="container">
+    <div id="cont_wrapper">
+    <div class="inner">
+
+        <!-- API: 리뷰 영화 순위 -->
+    <section class = list>
+        <div class="movie-slider">
+            <!-- API: 리뷰 영화 순위 -->
+            <section class=list>
+                <div class="list-header">
+                    <h2>영화 리뷰 순위</h2>
+                </div>
+                <div class="movie-slider">
+                    <ul class="movie-container">
+                        <!-- 영화 리뷰 순위 리스트 동적추가 -->
+
+                    </ul>
+                </div>
+            </section>
+
+            <!-- API: 현재 상영중인 영화 -->
+            <section class=list>
+                <div class="list-header">
+                    <h2>현재 상영작</h2>
+                </div>
+                <div class="movie-slider">
+                    <ul class="movie-container-2">
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 개봉예정영화 -->
+            <section class=list>
+                <div class="list-header">
+                    <h2>개봉 예정작</h2>
+                </div>
+                <div class="movie-slider">
+                    <ul class="movie-container-3">
+                        <!-- 개봉 예정작 리스트 동적추가 -->
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- popup -->
+    <dialog>
+        <div class="movie_images">
+            <img src="" alt="movie_poster">
+        </div>
+        <div class="movie_tit">
+            <h3></h3>
+            <p class="origin_tit"></p>
+        </div>
+        <div class="movie_desc"></div>
+        <div class="movie_vote">
+            <div class="movie_like">
+                <i class="fa-solid fa-heart"></i>
+                <span></span>
+            </div>
+            <div class="audience">
+                <strong>관객수 : </strong>
+                <span></span>명
+            </div>
+            <div class="grade">
+                <strong>평점 : </strong>
+                <span></span>
+            </div>
+        </div>
+        <div class="close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </dialog>
+    </div>
+</div>
+  
+
+  </div>
+  <footer class="BottomTab" id="bottom-tab">
+  <a class="TabItem" href="/pages/weather.html">
+    <i class="fa-solid fa-cloud"></i>
+    <span class="TabItemLabel">Weather</span>
+  </a>
+
+  <a class="TabItem" href="/pages/stock.html">
+    <i class="fa-solid fa-arrow-trend-up"></i>
+    <span class="TabItemLabel">Stock</span>
+  </a>
+  
+  <a class="TabItem" href="/">
+    <i class="fas fa-home"></i>
+    <span class="TabItemLabel">Home</span>
+  </a>
+
+  <a class="TabItem" href="/pages/movies.html">
+    <i class="fa-solid fa-clapperboard"></i>
+    <span class="TabItemLabel">Movies</span>
+  </a>
+  
+  <a class="TabItem" href="/pages/todo.html">
+    <i class="fa-solid fa-list"></i>
+    <span class="TabItemLabel">Todo</span>
+  </a>
+</footer>
+
+</div>
+
+  </body>
+</html>
